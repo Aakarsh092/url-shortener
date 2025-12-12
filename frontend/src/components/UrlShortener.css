@@ -1,0 +1,153 @@
+.url-shortener {
+  margin-bottom: 30px;
+}
+
+.url-form {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.url-input {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.url-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.url-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.shorten-btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.shorten-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.shorten-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.shorten-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fee;
+  border-radius: 5px;
+  border-left: 3px solid #e74c3c;
+}
+
+.result-container {
+  margin-top: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.result-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.short-url {
+  flex: 1;
+  padding: 12px 15px;
+  background: white;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #667eea;
+  font-weight: 500;
+  word-break: break-all;
+  transition: all 0.2s ease;
+}
+
+.short-url:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.copy-btn {
+  padding: 12px 20px;
+  background: white;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .result-box {
+    flex-direction: column;
+  }
+  
+  .copy-btn {
+    width: 100%;
+  }
+}
+
