@@ -218,15 +218,21 @@ npm test
 
 ## 🚢 Deployment
 
-### Backend Deployment
-- Build: `mvn clean package`
-- Run JAR: `java -jar target/url-shortener-backend-1.0.0.jar`
-- Configure MongoDB connection for production
+**📖 For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md)**
 
-### Frontend Deployment
-- Build: `npm run build`
-- Deploy the `build/` folder to a static hosting service (Netlify, Vercel, etc.)
-- Update API_BASE_URL to point to your production backend
+This project can be deployed for **FREE** using:
+- **Backend**: Render.com or Railway.app
+- **Frontend**: Vercel
+- **Database**: MongoDB Atlas (Free Tier)
+
+### Quick Deployment Steps
+
+1. **Set up MongoDB Atlas** (free tier)
+2. **Deploy backend** on Render.com with MongoDB connection string
+3. **Deploy frontend** on Vercel with backend API URL
+4. **Done!** Your app is live for free! 🎉
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for step-by-step instructions.
 
 ## 🤝 Contributing
 
